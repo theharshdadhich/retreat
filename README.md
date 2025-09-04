@@ -1,93 +1,213 @@
-# retreat-bot
+# BOT Consulting - Annual Retreat Website
 
+A modern, responsive Next.js website for the BOT Consulting Annual Company Retreat 2024. This website showcases the retreat itinerary, attendees, hackathon details, and provides comprehensive information about the event.
 
+## 🚀 Features
 
-## Getting started
+### 📱 Responsive Design
+- Mobile-first approach with responsive design
+- Optimized for all devices (desktop, tablet, mobile)
+- Modern UI with smooth animations and transitions
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### 🏠 Pages
+1. **Home Page** (`/`) - Landing page with company values and retreat overview
+2. **Itinerary** (`/itinerary`) - Complete 3-day schedule with interactive timeline
+3. **Attendees** (`/attendees`) - Team member profiles and guest speakers
+4. **Hackathon** (`/hackathon`) - Hackathon themes, rules, and judging panel
+5. **About BOT** (`/about`) - Company story, values, and achievements
+6. **Contact** (`/contact`) - Contact form and registration information
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### 🎨 Design Features
+- Modern gradient backgrounds
+- Interactive hover effects
+- Professional color scheme
+- Lucide React icons
+- Tailwind CSS styling
 
-## Add your files
+### ⚡ Technical Features
+- Next.js 15 with App Router
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Responsive navigation with mobile menu
+- Form handling with validation
+- SEO optimized with proper metadata
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+## 📋 Retreat Information
+
+### Event Details
+- **Dates**: October 24-26, 2024
+- **Duration**: 3 days
+- **Location**: Luxury Resort & Spa
+- **Participants**: 50+ including families
+
+### Activities
+- **Day 1**: Travel, Check-in, Welcome Note, Hackathon Prep, Board Meeting
+- **Day 2**: Wellness Activities, Hackathon, State of the Union, Diwali Celebration
+- **Day 3**: Sports Activities, Check-out, Travel Back
+
+### Hackathon Themes
+1. **AI-Powered Business Solutions** - Advanced level
+2. **Sustainable Technology** - Intermediate level
+3. **Digital Wellness Platform** - Beginner level
+4. **Smart City Solutions** - Advanced level
+
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **UI Components**: Headless UI
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd bot-retreat-website
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 📁 Project Structure
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/custom-tokenizer/retreat-bot.git
-git branch -M main
-git push -uf origin main
+bot-retreat-website/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx              # Home page
+│   │   ├── itinerary/
+│   │   │   └── page.tsx          # Itinerary page
+│   │   ├── attendees/
+│   │   │   └── page.tsx          # Attendees page
+│   │   ├── hackathon/
+│   │   │   └── page.tsx          # Hackathon page
+│   │   ├── about/
+│   │   │   └── page.tsx          # About page
+│   │   ├── contact/
+│   │   │   └── page.tsx          # Contact page
+│   │   ├── layout.tsx             # Root layout
+│   │   └── globals.css            # Global styles
+│   └── components/
+│       └── Navigation.tsx         # Navigation component
+├── public/                        # Static assets
+├── package.json                   # Dependencies
+├── tailwind.config.js            # Tailwind configuration
+└── README.md                      # This file
 ```
 
-## Integrate with your tools
+## 🎯 Key Features Explained
 
-- [ ] [Set up project integrations](https://gitlab.com/custom-tokenizer/retreat-bot/-/settings/integrations)
+### Navigation Component
+- Responsive navigation with mobile hamburger menu
+- Smooth transitions and hover effects
+- Fixed positioning for better UX
 
-## Collaborate with your team
+### Itinerary Page
+- Interactive timeline with activity icons
+- Color-coded participant categories
+- Detailed activity descriptions
+- Legend for activity types
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+### Attendees Page
+- Organized by roles (Founders, CAB, Team, Speakers)
+- Contact information and social links
+- Professional profile cards
+- Statistics section
 
-## Test and Deploy
+### Hackathon Page
+- Multiple theme options with difficulty levels
+- Comprehensive rules and guidelines
+- Judging panel information
+- Timeline with milestones
 
-Use the built-in continuous integration in GitLab.
+### Contact Page
+- Functional contact form with validation
+- Business hours and contact details
+- FAQ section
+- Retreat-specific information
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## 🎨 Customization
 
-***
+### Colors
+The website uses a consistent color scheme:
+- Primary: Blue (#3B82F6)
+- Secondary: Purple (#8B5CF6)
+- Accent: Green (#10B981)
+- Background: Gray (#F9FAFB)
 
-# Editing this README
+### Content Updates
+To update content:
+1. Edit the data objects in each page component
+2. Update images in the `public` directory
+3. Modify text content in the JSX
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Styling
+- All styling is done with Tailwind CSS classes
+- Custom styles can be added to `globals.css`
+- Component-specific styles are inline with Tailwind
 
-## Suggestions for a good README
+## 📱 Responsive Breakpoints
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
 
-## Name
-Choose a self-explaining name for your project.
+## 🚀 Deployment
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Other Platforms
+- Netlify
+- AWS Amplify
+- DigitalOcean App Platform
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## 🤝 Contributing
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+## 📄 License
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+This project is created for BOT Consulting's internal use.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+## 📞 Support
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+For questions or support:
+- Email: info@botconsulting.com
+- Phone: +1 (555) 123-4567
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+---
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+**BOT Consulting** - Transforming businesses through innovative technology solutions
