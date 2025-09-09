@@ -103,7 +103,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Have questions about the retreat? Want to register? We'd love to hear from you!
+              Have questions about the retreat? Want to register? We&apos;d love to hear from you!
             </p>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function Contact() {
                   </div>
                   <h3 className="text-lg font-semibold text-green-800 mb-2">Message Sent!</h3>
                   <p className="text-green-700">
-                    Thank you for your message. We'll get back to you within 24 hours.
+                    Thank you for your message. We&apos;ll get back to you within 24 hours.
                   </p>
                 </div>
               ) : (
@@ -197,7 +197,7 @@ export default function Contact() {
                   
                   <div>
                     <label htmlFor="interestedIn" className="block text-sm font-medium text-gray-700 mb-2">
-                      I'm interested in:
+                      I&apos;m interested in:
                     </label>
                     <select
                       id="interestedIn"
@@ -352,7 +352,7 @@ export default function Contact() {
               </div>
               
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What's included in the retreat package?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">What&apos;s included in the retreat package?</h3>
                 <p className="text-gray-600">
                   The package includes accommodation, meals, activities, hackathon participation, and all retreat materials.
                 </p>
@@ -384,7 +384,7 @@ export default function Contact() {
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">What if I have dietary restrictions?</h3>
                 <p className="text-gray-600">
-                  Please let us know in advance, and we'll ensure all dietary requirements are accommodated.
+                  Please let us know in advance, and we&apos;ll ensure all dietary requirements are accommodated.
                 </p>
               </div>
             </div>
@@ -397,7 +397,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Join Us?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Don't miss out on this incredible opportunity to connect, innovate, and celebrate with the BOT family
+            Don&apos;t miss out on this incredible opportunity to connect, innovate, and celebrate with the BOT family
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#F16522] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">

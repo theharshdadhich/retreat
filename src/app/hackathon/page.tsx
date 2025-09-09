@@ -1,5 +1,5 @@
 import Navigation from '@/components/Navigation'
-import { Code, Trophy, Users, Clock, Award, Lightbulb, Target, CheckCircle, Star } from 'lucide-react'
+import { Trophy, Users, Clock, Award, CheckCircle } from 'lucide-react'
 
 const hackathonThemes = [
   {

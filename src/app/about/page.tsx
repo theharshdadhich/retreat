@@ -118,7 +118,7 @@ export default function About() {
                 and organizations, not complicate their lives.
               </p>
               <p className="text-lg text-gray-600">
-                Today, we're proud to serve clients across various industries, delivering 
+                Today, we&apos;re proud to serve clients across various industries, delivering 
                 innovative solutions that drive real business value and create lasting impact.
               </p>
             </div>
@@ -312,7 +312,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's discuss how BOT Consulting can help you achieve your digital transformation goals
+            Let&apos;s discuss how BOT Consulting can help you achieve your digital transformation goals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-[#42C3D6] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#42C3D6]/90 transition-colors">

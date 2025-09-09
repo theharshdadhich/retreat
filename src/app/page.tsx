@@ -86,7 +86,7 @@ export default function Home() {
             Our Annual Retreat of Ideas and Inspiration
             </h2>
             <p className="text-lg text-black mb-12 max-w-3xl mx-auto">
-            A retreat dedicated to growth, culture, and the future we're building together.
+            A retreat dedicated to growth, culture, and the future we&apos;re building together.
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
