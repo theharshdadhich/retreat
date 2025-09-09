@@ -195,17 +195,17 @@ const getActivityIcon = (type: string) => {
     case 'meal':
       return <Utensils className="text-[#F16522]" size={20} />
     case 'meeting':
-      return <Users className="text-[#42C3D6]" size={20} />
+      return <Users className="text-[#EA580C]" size={20} />
     case 'workshop':
       return <Activity className="text-[#F16522]" size={20} />
     case 'wellness':
-      return <Coffee className="text-[#42C3D6]" size={20} />
+      return <Coffee className="text-[#EA580C]" size={20} />
     case 'travel':
       return <MapPin className="text-[#2C2C2C]" size={20} />
     case 'celebration':
       return <Calendar className="text-[#F16522]" size={20} />
     case 'activity':
-      return <Activity className="text-[#42C3D6]" size={20} />
+      return <Activity className="text-[#EA580C]" size={20} />
     case 'admin':
       return <Clock className="text-[#2C2C2C]" size={20} />
     default:
@@ -214,20 +214,20 @@ const getActivityIcon = (type: string) => {
 }
 
 const getParticipantColor = (participants: string) => {
-  if (participants.includes('Everyone')) return 'bg-[#42C3D6]/20 text-[#42C3D6]'
+  if (participants.includes('Everyone')) return 'bg-[#EA580C]/20 text-[#EA580C]'
   if (participants.includes('BOT Team')) return 'bg-[#F16522]/20 text-[#F16522]'
   if (participants.includes('Founders')) return 'bg-[#2C2C2C]/20 text-[#2C2C2C]'
-  if (participants.includes('Kids')) return 'bg-[#42C3D6]/20 text-[#42C3D6]'
+  if (participants.includes('Kids')) return 'bg-[#EA580C]/20 text-[#EA580C]'
   return 'bg-[#2C2C2C]/20 text-[#2C2C2C]'
 }
 
 export default function Itinerary() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-orange-50">
       <Navigation />
       
       {/* Header */}
-      <section className="pt-16 bg-gradient-to-r from-[#42C3D6] to-[#42C3D6]/80">
+      <section className="pt-16 bg-gradient-to-r from-[#F97316] to-[#FB923C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -240,57 +240,77 @@ export default function Itinerary() {
         </div>
       </section>
 
-      {/* Itinerary Content */}
+      {/* Itinerary Content - Horizontal Timeline */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {itineraryData.map((day, dayIndex) => (
-            <div key={day.day} className="mb-16">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          {/* Day Headers */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
+            {itineraryData.map((day) => (
+              <div key={day.day} className="text-center bg-white rounded-lg shadow-sm p-4 sm:p-6">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                   Day {day.day}
                 </h2>
-                <p className="text-xl text-gray-600">{day.date}</p>
+                <p className="text-sm sm:text-lg text-gray-600">{day.date}</p>
               </div>
-              
-              <div className="space-y-6">
-                {day.activities.map((activity, activityIndex) => (
-                  <div 
-                    key={activityIndex}
-                    className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                          {getActivityIcon(activity.type)}
-                        </div>
-                      </div>
+            ))}
+          </div>
+
+          {/* Horizontal Timeline Container */}
+          <div className="relative">
+            {/* Timeline Line - Hidden on mobile, visible on larger screens */}
+            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#FB923C] via-[#F97316] to-[#FB923C] hidden lg:block"></div>
+            
+            {/* Activities Grid - Responsive columns */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {itineraryData.map((day, dayIndex) => (
+                <div key={day.day} className="space-y-3 sm:space-y-4">
+                  {/* Day Label for Mobile */}
+                  <div className="lg:hidden bg-[#F97316] text-white px-3 py-2 rounded-lg text-center font-semibold text-sm">
+                    Day {day.day} - {day.date}
+                  </div>
+                  
+                  {day.activities.map((activity, activityIndex) => (
+                    <div 
+                      key={activityIndex}
+                      className="bg-white rounded-lg shadow-md p-3 sm:p-4 hover:shadow-lg transition-all duration-200 hover:scale-105 relative"
+                    >
+                      {/* Timeline Dot - Only visible on large screens */}
+                      <div className="absolute -left-3 top-6 w-6 h-6 bg-white border-4 border-[#F97316] rounded-full hidden lg:block"></div>
                       
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center justify-between mb-2">
-                          <h3 className="text-lg font-semibold text-gray-900">
-                            {activity.title}
-                          </h3>
-                          <span className="text-sm font-medium text-gray-500">
-                            {activity.time}
-                          </span>
+                      <div className="flex items-start space-x-3">
+                        <div className="flex-shrink-0">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                            {getActivityIcon(activity.type)}
+                          </div>
                         </div>
                         
-                        <p className="text-gray-600 mb-3">
-                          {activity.description}
-                        </p>
-                        
-                        <div className="flex items-center space-x-2">
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getParticipantColor(activity.participants)}`}>
-                            {activity.participants}
-                          </span>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col space-y-1 mb-2">
+                            <h3 className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">
+                              {activity.title}
+                            </h3>
+                            <span className="text-xs font-medium text-gray-500">
+                              {activity.time}
+                            </span>
+                          </div>
+                          
+                          <p className="text-xs text-gray-600 mb-2 line-clamp-2">
+                            {activity.description}
+                          </p>
+                          
+                          <div className="flex items-center">
+                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${getParticipantColor(activity.participants)}`}>
+                              {activity.participants}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -298,32 +318,32 @@ export default function Itinerary() {
       <section className="py-12 bg-white border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Activity Types</h3>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="flex items-center space-x-3">
-                <Utensils className="text-[#F16522]" size={20} />
-                <span className="text-[#2C2C2C]">Meals & Refreshments</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Users className="text-[#42C3D6]" size={20} />
-                <span className="text-[#2C2C2C]">Meetings & Sessions</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Activity className="text-[#F16522]" size={20} />
-                <span className="text-[#2C2C2C]">Workshops & Activities</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Coffee className="text-[#42C3D6]" size={20} />
-                <span className="text-[#2C2C2C]">Wellness & Relaxation</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="text-[#2C2C2C]" size={20} />
-                <span className="text-[#2C2C2C]">Travel & Logistics</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Calendar className="text-[#F16522]" size={20} />
-                <span className="text-[#2C2C2C]">Celebrations & Events</span>
-              </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="flex items-center space-x-3">
+              <Utensils className="text-[#F16522]" size={20} />
+              <span className="text-[#2C2C2C]">Meals & Refreshments</span>
             </div>
+            <div className="flex items-center space-x-3">
+              <Users className="text-[#EA580C]" size={20} />
+              <span className="text-[#2C2C2C]">Meetings & Sessions</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Activity className="text-[#F16522]" size={20} />
+              <span className="text-[#2C2C2C]">Workshops & Activities</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Coffee className="text-[#EA580C]" size={20} />
+              <span className="text-[#2C2C2C]">Wellness & Relaxation</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <MapPin className="text-[#2C2C2C]" size={20} />
+              <span className="text-[#2C2C2C]">Travel & Logistics</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Calendar className="text-[#F16522]" size={20} />
+              <span className="text-[#2C2C2C]">Celebrations & Events</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -332,7 +352,7 @@ export default function Itinerary() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold mb-4">BOT Consulting</h3>
           <p className="text-white/70">
-            Annual Company Retreat 2024 • October 24-26
+            Annual Company Retreat 2025 • October 24-26
           </p>
         </div>
       </footer>
