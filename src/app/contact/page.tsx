@@ -415,7 +415,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold mb-4">BOT Consulting</h3>
           <p className="text-white/70 mb-6">
-            Annual Company Retreat 2024 • October 24-26
+            Annual Company Retreat 2025 • October 24-26
           </p>
           <div className="flex justify-center space-x-6">
             <a href="mailto:info@botconsulting.com" className="text-white/70 hover:text-white transition-colors">
