@@ -66,7 +66,7 @@ export default function Home() {
         <section className="py-20 bg-[#FEF6EC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#ff4400] mb-4">
                 Countdown to the Event
               </h2>
               <p className="text-lg text-black max-w-3xl mx-auto">
@@ -82,8 +82,8 @@ export default function Home() {
         {/* Cultural Heritage Section */}
         <section className="py-20 bg-[#FEF6EC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Our Annual Retreat of Ideas and Inspiration
+            <h2 className="text-4xl md:text-5xl font-bold text-[#ff4400] mb-6">
+            Retreat Highlights
             </h2>
             <p className="text-lg text-black mb-12 max-w-3xl mx-auto">
             A retreat dedicated to growth, culture, and the future we&apos;re building together.
@@ -91,19 +91,19 @@ export default function Home() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-black mb-2">Hackathons</h3>
+                <h3 className="text-lg font-semibold text-[#ff4400] mb-2">Hackathons</h3>
                 <p className="text-black text-sm">Unleash innovation and creativity through problem-solving challenges</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-black mb-2">Sports </h3>
+                <h3 className="text-lg font-semibold text-[#ff4400] mb-2">Sports </h3>
                 <p className="text-black text-sm">Experience the thrill of competition and team spirit in exciting games</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-black mb-2">Cultural Night</h3>
+                <h3 className="text-lg font-semibold text-[#ff4400] mb-2">Cultural Night</h3>
                 <p className="text-black text-sm">Immerse yourself in vibrant performances, traditions, and celebrations</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-black mb-2">State of the Union</h3>
+                <h3 className="text-lg font-semibold text-[#ff4400] mb-2">State of the Union</h3>
                 <p className="text-black text-sm">Gain insights and inspiration from thought-provoking talks and discussions</p>
               </div>
             </div>
@@ -126,9 +126,9 @@ export default function Home() {
                 <Link href="/hackathon" className="text-black hover:text-amber-900 transition-colors text-lg font-medium">Hackathon</Link>
                 <Link href="/contact" className="text-black hover:text-amber-900 transition-colors text-lg font-medium">Contact</Link>
               </div>
-              <div className="border-t border-amber-300/30 pt-6">
+              {/* <div className="border-t border-amber-300/30 pt-6">
                 <p className="text-black">Experience the Royal Heritage • Build • Operate • Transform</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </footer>
