@@ -47,7 +47,7 @@ const itineraryData = [
           {
             time: '14:30 – 17:30',
             title: 'Fun Workshops',
-            participants: 'Everyone',
+            participants: 'Kids & Families',
             type: 'activity',
             description: 'Interactive workshops and activities'
           },
@@ -68,7 +68,7 @@ const itineraryData = [
           {
             time: '17:45 – 18:45',
             title: 'Fun Bug Friday',
-            participants: 'BOT Team',
+            participants: 'Everyone',
             type: 'activity',
             description: 'Team building and fun activities'
           },
@@ -123,14 +123,14 @@ const itineraryData = [
           {
             time: '15:00 – 16:00',
             title: 'State of the Union',
-            participants: 'Everyone',
+            participants: 'BOT Team',
             type: 'meeting',
             description: 'Company updates and future roadmap presentation'
           },
           {
             time: '16:15 – 17:00',
             title: 'Fireside Chat',
-            participants: 'Everyone',
+            participants: 'BOT Team, Founders, CAB',
             type: 'meeting',
             description: 'Interactive Q&A session with leadership'
           },
