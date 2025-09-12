@@ -66,10 +66,10 @@ export default function Home() {
         <section className="py-20 bg-[#FEF6EC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#ff4400] mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#E17100] mb-4">
                 Countdown to the Event
               </h2>
-              <p className="text-lg text-black max-w-3xl mx-auto">
+              <p className="text-lg text-[#4A4A4A] max-w-3xl mx-auto">
                 Join us on October 24th, 2025 for an unforgettable experience in the beautiful city of Jaipur
               </p>
             </div>
@@ -82,29 +82,29 @@ export default function Home() {
         {/* Cultural Heritage Section */}
         <section className="py-20 bg-[#FEF6EC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#ff4400] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#E17100] mb-6">
             Retreat Highlights
             </h2>
-            <p className="text-lg text-black mb-12 max-w-3xl mx-auto">
+            <p className="text-lg text-[#4A4A4A] mb-12 max-w-3xl mx-auto">
             A retreat dedicated to growth, culture, and the future we&apos;re building together.
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#ff4400] mb-2">Hackathons</h3>
-                <p className="text-black text-sm">Unleash innovation and creativity through problem-solving challenges</p>
+                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Hackathons</h3>
+                <p className="text-[#4A4A4A] text-sm">Unleash innovation and creativity through problem-solving challenges</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#ff4400] mb-2">Sports </h3>
-                <p className="text-black text-sm">Experience the thrill of competition and team spirit in exciting games</p>
+                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Sports </h3>
+                <p className="text-[#4A4A4A] text-sm">Experience the thrill of competition and team spirit in exciting games</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#ff4400] mb-2">Cultural Night</h3>
-                <p className="text-black text-sm">Immerse yourself in vibrant performances, traditions, and celebrations</p>
+                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Cultural Night</h3>
+                <p className="text-[#4A4A4A] text-sm">Immerse yourself in vibrant performances, traditions, and celebrations</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#ff4400] mb-2">State of the Union</h3>
-                <p className="text-black text-sm">Gain insights and inspiration from thought-provoking talks and discussions</p>
+                <h3 className="text-lg font-semibold text-[#E17100] mb-2">State of the Union</h3>
+                <p className="text-[#4A4A4A] text-sm">Gain insights and inspiration from thought-provoking talks and discussions</p>
               </div>
             </div>
           </div>
@@ -117,14 +117,14 @@ export default function Home() {
               <div className="flex items-center justify-center mb-6">
                 <Image src="/Asset 8@4x.png" alt="BOT Consulting" width={260} height={60} className="h-14 w-auto" />
               </div>
-              <p className="text-black text-lg mb-8">
+              <p className="text-[#4A4A4A] text-lg mb-8">
                 Annual Company Retreat 2025 • October 24-26 • Jaipur, Rajasthan
               </p>
               <div className="flex justify-center space-x-8 mb-8">
-                <Link href="/about" className="text-black hover:text-amber-900 transition-colors text-lg font-medium">About</Link>
-                <Link href="/itinerary" className="text-black hover:text-amber-900 transition-colors text-lg font-medium">Itinerary</Link>
-                <Link href="/hackathon" className="text-black hover:text-amber-900 transition-colors text-lg font-medium">Hackathon</Link>
-                <Link href="/contact" className="text-black hover:text-amber-900 transition-colors text-lg font-medium">Contact</Link>
+                <Link href="/about" className="text-[#4A4A4A] hover:text-amber-900 transition-colors text-lg font-medium">About</Link>
+                <Link href="/itinerary" className="text-[#4A4A4A] hover:text-amber-900 transition-colors text-lg font-medium">Itinerary</Link>
+                <Link href="/hackathon" className="text-[#4A4A4A] hover:text-amber-900 transition-colors text-lg font-medium">Hackathon</Link>
+                <Link href="/contact" className="text-[#4A4A4A] hover:text-amber-900 transition-colors text-lg font-medium">Contact</Link>
               </div>
               {/* <div className="border-t border-amber-300/30 pt-6">
                 <p className="text-black">Experience the Royal Heritage • Build • Operate • Transform</p>

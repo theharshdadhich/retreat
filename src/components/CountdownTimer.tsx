@@ -75,10 +75,10 @@ export default function CountdownTimer() {
           key={unit.label}
           className="bg-white rounded-xl p-6 sm:p-8 min-w-[100px] sm:min-w-[120px] text-center border border-amber-100 shadow-sm"
         >
-          <div className="text-4xl sm:text-6xl font-bold text-black mb-2 sm:mb-3 tracking-tight">
+          <div className="text-4xl sm:text-6xl font-bold text-[#4A4A4A] mb-2 sm:mb-3 tracking-tight">
             {unit.value.toString().padStart(2, '0')}
           </div>
-          <div className="text-sm sm:text-base text-black font-semibold uppercase tracking-wider">
+          <div className="text-sm sm:text-base text-[#4A4A4A] font-semibold uppercase tracking-wider">
             {unit.label}
           </div>
         </div>
