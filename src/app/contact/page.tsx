@@ -345,16 +345,16 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">How do I register for the retreat?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Which expenses will BOT cover during the retreat, and how should travel be arranged?</h3>
                 <p className="text-gray-600">
-                  You can register by filling out the contact form above or by emailing us directly at retreat@botconsulting.com
+                  BOT will cover your accommodation, meals, retreat activities, and all official events. For participants traveling from outside Jaipur, you are requested to book your own tickets. The cost of these tickets will be reimbursed by BOT in line with company policy.
                 </p>
               </div>
               
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What&apos;s included in the retreat package?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I bring my family, and will there be activities for them?</h3>
                 <p className="text-gray-600">
-                  The package includes accommodation, meals, activities, hackathon participation, and all retreat materials.
+                Yes! You&apos;re welcome to bring your spouse and kids. We&apos;ve planned family-friendly activities such as cultural evenings, Diwali celebrations, and sports, so everyone can enjoy the retreat together.
                 </p>
               </div>
               
