@@ -5,238 +5,238 @@ import { Calendar, Clock, Users, MapPin, Coffee, Utensils, Activity, Filter } fr
 
 // Updated itinerary data based on the PDF
 const itineraryData = [
+  {
+    day: 1,
+    date: 'October 24, Friday',
+    activities: [
       {
-        day: 1,
-        date: 'October 24, Friday',
-        activities: [
-          {
-            time: '10:30 – 12:00',
-            title: 'Travel to Resort',
-            participants: 'Everyone',
-            type: 'travel',
-            description: 'Group travel to the retreat venue'
-          },
-          {
-            time: '12:00 – 13:00',
-            title: 'Check-In',
-            participants: 'Everyone',
-            type: 'admin',
-            description: 'Hotel check-in and room assignments'
-          },
-          {
-            time: '13:00 – 14:00',
-            title: 'Lunch',
-            participants: 'Everyone',
-            type: 'meal',
-            description: 'Lunch at the resort'
-          },
-          {
-            time: '14:15 – 14:30',
-            title: 'Welcome Note',
-            participants: 'Everyone',
-            type: 'meeting',
-            description: 'Opening ceremony and retreat overview'
-          },
-          {
-            time: '14:30 – 17:30',
-            title: 'Hackathon Prep',
-            participants: 'BOT Team',
-            type: 'workshop',
-            description: 'Team formation and project planning'
-          },
-          {
-            time: '14:30 – 17:30',
-            title: 'Fun Workshops',
-            participants: 'Kids & Families',
-            type: 'activity',
-            description: 'Interactive workshops and activities'
-          },
-          {
-            time: '14:30 – 17:30',
-            title: 'Board Meeting',
-            participants: 'Founders, CAB',
-            type: 'meeting',
-            description: 'Strategic planning and company updates'
-          },
-          {
-            time: '16:30 – 17:30',
-            title: 'High Tea',
-            participants: 'Everyone',
-            type: 'meal',
-            description: 'Afternoon refreshments and networking'
-          },
-          {
-            time: '17:45 – 18:45',
-            title: 'Fun Bug Friday',
-            participants: 'Everyone',
-            type: 'activity',
-            description: 'Team building and fun activities'
-          },
-          {
-            time: '19:30 – 22:30',
-            title: 'Dinner and Cocktails',
-            participants: 'Everyone',
-            type: 'meal',
-            description: 'Welcome dinner with cocktails and networking'
-          }
-        ]
+        time: '10:30 – 12:00',
+        title: 'Travel to Resort',
+        participants: 'Everyone',
+        type: 'travel',
+        description: 'Group travel to the retreat venue'
       },
       {
-        day: 2,
-        date: 'October 25, Saturday',
-        activities: [
-          {
-            time: '07:00 – 08:00',
-            title: 'Wellness Activity',
-            participants: 'Everyone',
-            type: 'wellness',
-            description: 'Morning yoga and meditation session'
-          },
-          {
-            time: '08:00 – 10:00',
-            title: 'Breakfast',
-            participants: 'Everyone',
-            type: 'meal',
-            description: 'Healthy breakfast buffet'
-          },
-          {
-            time: '11:00 – 12:30',
-            title: 'Hackathon',
-            participants: 'BOT Team',
-            type: 'workshop',
-            description: 'Main hackathon competition and coding challenges'
-          },
-          {
-            time: '11:00 – 12:30',
-            title: 'Fun Workshops',
-            participants: 'Kids & Families',
-            type: 'activity',
-            description: 'Interactive workshops and activities for children and families'
-          },
-          {
-            time: '12:30 – 14:30',
-            title: 'Lunch',
-            participants: 'Everyone',
-            type: 'meal',
-            description: 'Lunch break with team discussions'
-          },
-          {
-            time: '15:00 – 16:00',
-            title: 'State of the Union',
-            participants: 'BOT Team',
-            type: 'meeting',
-            description: 'Company updates and future roadmap presentation'
-          },
-          {
-            time: '16:15 – 17:00',
-            title: 'Fireside Chat',
-            participants: 'BOT Team, Founders, CAB',
-            type: 'meeting',
-            description: 'Interactive Q&A session with leadership'
-          },
-          {
-            time: '17:00 – 18:00',
-            title: 'High Tea',
-            participants: 'Everyone',
-            type: 'meal',
-            description: 'Afternoon tea and snacks'
-          },
-          {
-            time: '19:15 – 22:30',
-            title: 'Cultural Evening',
-            participants: 'Everyone',
-            type: 'celebration',
-            description: 'Cultural performances and entertainment'
-          },
-          {
-            time: '19:15 – 22:30',
-            title: 'Annual R&R',
-            participants: 'Everyone',
-            type: 'celebration',
-            description: 'Recognition and rewards ceremony'
-          },
-          {
-            time: '19:15 – 22:30',
-            title: 'Diwali Celebration',
-            participants: 'Everyone',
-            type: 'celebration',
-            description: 'Traditional Diwali festivities and cultural activities'
-          },
-          {
-            time: '19:15 – 22:30',
-            title: 'Dinner and Cocktails',
-            participants: 'Everyone',
-            type: 'meal',
-            description: 'Dinner with cocktails and networking'
-          }
-        ]
+        time: '12:00 – 13:00',
+        title: 'Check-In',
+        participants: 'Everyone',
+        type: 'admin',
+        description: 'Hotel check-in and room assignments'
       },
       {
-        day: 3,
-        date: 'October 26, Sunday',
-        activities: [
-          {
-            time: '07:00 – 08:00',
-            title: 'Sports Activity',
-            participants: 'Everyone',
-            type: 'activity',
-            description: 'Morning sports and fitness activities'
-          },
-          {
-            time: '08:00 – 10:00',
-            title: 'Breakfast',
-            participants: 'Everyone',
-            type: 'meal',
-            description: 'Final breakfast together'
-          },
-          {
-            time: '11:00 – 12:00',
-            title: 'Check-Out',
-            participants: 'Everyone',
-            type: 'admin',
-            description: 'Hotel check-out and departure preparations'
-          },
-          {
-            time: '12:00 – 13:00',
-            title: 'Travel Back',
-            participants: 'Everyone',
-            type: 'travel',
-            description: 'Return journey to office'
-          }
-        ]
+        time: '13:00 – 14:00',
+        title: 'Lunch',
+        participants: 'Everyone',
+        type: 'meal',
+        description: 'Lunch at the resort'
+      },
+      {
+        time: '14:15 – 14:30',
+        title: 'Welcome Note',
+        participants: 'Everyone',
+        type: 'meeting',
+        description: 'Opening ceremony and retreat overview'
+      },
+      {
+        time: '14:30 – 17:30',
+        title: 'Hackathon Prep',
+        participants: 'BOT Team',
+        type: 'workshop',
+        description: 'Team formation and project planning'
+      },
+      {
+        time: '14:30 – 17:30',
+        title: 'Fun Workshops',
+        participants: 'Kids & Families',
+        type: 'activity',
+        description: 'Interactive workshops and activities'
+      },
+      {
+        time: '14:30 – 17:30',
+        title: 'Board Meeting',
+        participants: 'Founders, CAB',
+        type: 'meeting',
+        description: 'Strategic planning and company updates'
+      },
+      {
+        time: '16:30 – 17:30',
+        title: 'High Tea',
+        participants: 'Everyone',
+        type: 'meal',
+        description: 'Afternoon refreshments and networking'
+      },
+      {
+        time: '17:45 – 18:45',
+        title: 'Fun Bug Friday',
+        participants: 'Everyone',
+        type: 'activity',
+        description: 'Team building and fun activities'
+      },
+      {
+        time: '19:30 – 22:30',
+        title: 'Dinner and Cocktails',
+        participants: 'Everyone',
+        type: 'meal',
+        description: 'Welcome dinner with cocktails and networking'
       }
+    ]
+  },
+  {
+    day: 2,
+    date: 'October 25, Saturday',
+    activities: [
+      {
+        time: '07:00 – 08:00',
+        title: 'Wellness Activity',
+        participants: 'Everyone',
+        type: 'wellness',
+        description: 'Morning yoga and meditation session'
+      },
+      {
+        time: '08:00 – 10:00',
+        title: 'Breakfast',
+        participants: 'Everyone',
+        type: 'meal',
+        description: 'Healthy breakfast buffet'
+      },
+      {
+        time: '11:00 – 12:30',
+        title: 'Hackathon',
+        participants: 'BOT Team',
+        type: 'workshop',
+        description: 'Main hackathon competition and coding challenges'
+      },
+      {
+        time: '11:00 – 12:30',
+        title: 'Fun Workshops',
+        participants: 'Kids & Families',
+        type: 'activity',
+        description: 'Interactive workshops and activities for children and families'
+      },
+      {
+        time: '12:30 – 14:30',
+        title: 'Lunch',
+        participants: 'Everyone',
+        type: 'meal',
+        description: 'Lunch break with team discussions'
+      },
+      {
+        time: '15:00 – 16:00',
+        title: 'State of the Union',
+        participants: 'BOT Team',
+        type: 'meeting',
+        description: 'Company updates and future roadmap presentation'
+      },
+      {
+        time: '16:15 – 17:00',
+        title: 'Fireside Chat',
+        participants: 'BOT Team, Founders, CAB',
+        type: 'meeting',
+        description: 'Interactive Q&A session with leadership'
+      },
+      {
+        time: '17:00 – 18:00',
+        title: 'High Tea',
+        participants: 'Everyone',
+        type: 'meal',
+        description: 'Afternoon tea and snacks'
+      },
+      {
+        time: '19:15 – 22:30',
+        title: 'Cultural Evening',
+        participants: 'Everyone',
+        type: 'celebration',
+        description: 'Cultural performances and entertainment'
+      },
+      {
+        time: '19:15 – 22:30',
+        title: 'Annual R&R',
+        participants: 'Everyone',
+        type: 'celebration',
+        description: 'Recognition and rewards ceremony'
+      },
+      {
+        time: '19:15 – 22:30',
+        title: 'Diwali Celebration',
+        participants: 'Everyone',
+        type: 'celebration',
+        description: 'Traditional Diwali festivities and cultural activities'
+      },
+      {
+        time: '19:15 – 22:30',
+        title: 'Dinner and Cocktails',
+        participants: 'Everyone',
+        type: 'meal',
+        description: 'Dinner with cocktails and networking'
+      }
+    ]
+  },
+  {
+    day: 3,
+    date: 'October 26, Sunday',
+    activities: [
+      {
+        time: '07:00 – 08:00',
+        title: 'Sports Activity',
+        participants: 'Everyone',
+        type: 'activity',
+        description: 'Morning sports and fitness activities'
+      },
+      {
+        time: '08:00 – 10:00',
+        title: 'Breakfast',
+        participants: 'Everyone',
+        type: 'meal',
+        description: 'Final breakfast together'
+      },
+      {
+        time: '11:00 – 12:00',
+        title: 'Check-Out',
+        participants: 'Everyone',
+        type: 'admin',
+        description: 'Hotel check-out and departure preparations'
+      },
+      {
+        time: '12:00 – 13:00',
+        title: 'Travel Back',
+        participants: 'Everyone',
+        type: 'travel',
+        description: 'Return journey to office'
+      }
+    ]
+  }
 ]
 
 const getActivityIcon = (type: string) => {
   switch (type) {
-        case 'meal':
-          return <Utensils className="text-[#F16522]" size={20} />
-        case 'meeting':
-          return <Users className="text-[#EA580C]" size={20} />
-        case 'workshop':
-          return <Activity className="text-[#F16522]" size={20} />
-        case 'wellness':
-          return <Coffee className="text-[#EA580C]" size={20} />
-        case 'travel':
-          return <MapPin className="text-[#2C2C2C]" size={20} />
-        case 'celebration':
-          return <Calendar className="text-[#F16522]" size={20} />
-        case 'activity':
-          return <Activity className="text-[#EA580C]" size={20} />
-        case 'admin':
-          return <Clock className="text-[#2C2C2C]" size={20} />
-        default:
-          return <Clock className="text-[#2C2C2C]" size={20} />
-    }
+    case 'meal':
+      return <Utensils className="text-[#F16522]" size={20} />
+    case 'meeting':
+      return <Users className="text-[#F16522]" size={20} />
+    case 'workshop':
+      return <Activity className="text-[#F16522]" size={20} />
+    case 'wellness':
+      return <Coffee className="text-[#F16522]" size={20} />
+    case 'travel':
+      return <MapPin className="text-[#F16522]" size={20} />
+    case 'celebration':
+      return <Calendar className="text-[#F16522]" size={20} />
+    case 'activity':
+      return <Activity className="text-[#F16522]" size={20} />
+    case 'admin':
+      return <Clock className="text-[#F16522]" size={20} />
+    default:
+      return <Clock className="text-[#F16522]" size={20} />
+  }
 }
 
 const getParticipantColor = (participants: string) => {
   if (participants.includes('Everyone')) return 'bg-[#EA580C]/20 text-[#EA580C]'
   if (participants.includes('BOT Team')) return 'bg-[#F16522]/20 text-[#F16522]'
-  if (participants.includes('Founders')) return 'bg-[#2C2C2C]/20 text-[#2C2C2C]'
+  if (participants.includes('Founders')) return 'bg-[#4A4A4A]/20 text-[#4A4A4A]'
   if (participants.includes('Kids')) return 'bg-[#EA580C]/20 text-[#EA580C]'
-  if (participants.includes('CAB')) return 'bg-[#2C2C2C]/20 text-[#2C2C2C]'
-  return 'bg-[#2C2C2C]/20 text-[#2C2C2C]'
+  if (participants.includes('CAB')) return 'bg-[#4A4A4A]/20 text-[#4A4A4A]'
+  return 'bg-[#4A4A4A]/20 text-[#4A4A4A]'
 }
 
 // Participant groups for filtering
@@ -275,10 +275,10 @@ export default function Itinerary() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              Retreat Itinerary
+              Game Plan
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              A comprehensive 3-day schedule filled with innovation, wellness, and celebration
+            Your playbook for 3 days of big ideas, mindful breaks, and celebrations worth remembering.
             </p>
           </div>
         </div>
@@ -289,8 +289,8 @@ export default function Itinerary() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center">
-              <Filter size={20} className="text-gray-600 mr-2" />
-              <span className="font-medium text-gray-700">Filter by:</span>
+              <Filter size={20} className="text-[#4A4A4A] mr-2" />
+              <span className="font-medium text-[#4A4A4A]">Filter by:</span>
             </div>
             <div className="flex flex-wrap gap-2">
               {participantGroups.map(group => (
@@ -300,7 +300,7 @@ export default function Itinerary() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     activeFilter === group.id
                       ? 'bg-[#F97316] text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : 'bg-gray-100 text-[#4A4A4A] hover:bg-gray-200'
                   }`}
                 >
                   {group.name}
@@ -318,10 +318,10 @@ export default function Itinerary() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
             {itineraryData.map((day) => (
               <div key={day.day} className="text-center bg-white rounded-lg shadow-sm p-4 sm:p-6">
-                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#4A4A4A] mb-2">
                   Day {day.day}
                 </h2>
-                <p className="text-sm sm:text-lg text-gray-600">{day.date}</p>
+                <p className="text-sm sm:text-lg text-[#4A4A4A]">{day.date}</p>
               </div>
             ))}
           </div>
@@ -351,15 +351,15 @@ export default function Itinerary() {
                         
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-col space-y-1 mb-2">
-                            <h3 className="text-sm font-semibold text-gray-900 leading-tight">
+                            <h3 className="text-sm font-semibold text-[#4A4A4A] leading-tight">
                               {activity.title}
                             </h3>
-                            <span className="text-xs font-medium text-gray-500">
+                            <span className="text-xs font-medium text-[#4A4A4A]">
                               {activity.time}
                             </span>
                           </div>
                           
-                          <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                          <p className="text-xs text-[#4A4A4A] mb-3 line-clamp-2">
                             {activity.description}
                           </p>
                           
@@ -389,38 +389,42 @@ export default function Itinerary() {
       {/* Legend */}
       <section className="py-12 bg-white border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Activity Types</h3>
+          <h3 className="text-2xl font-bold text-[#4A4A4A] mb-6 text-center">Activity Types</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center space-x-3">
               <Utensils className="text-[#F16522]" size={20} />
-              <span className="text-[#2C2C2C]">Meals & Refreshments</span>
+              <span className="text-[#4A4A4A]">Meals & Refreshments</span>
             </div>
             <div className="flex items-center space-x-3">
-              <Users className="text-[#EA580C]" size={20} />
-              <span className="text-[#2C2C2C]">Meetings & Sessions</span>
+              <Users className="text-[#F16522]" size={20} />
+              <span className="text-[#4A4A4A]">Meetings & Sessions</span>
             </div>
             <div className="flex items-center space-x-3">
               <Activity className="text-[#F16522]" size={20} />
-              <span className="text-[#2C2C2C]">Workshops & Activities</span>
+              <span className="text-[#4A4A4A]">Workshops & Activities</span>
             </div>
             <div className="flex items-center space-x-3">
-              <Coffee className="text-[#EA580C]" size={20} />
-              <span className="text-[#2C2C2C]">Wellness & Relaxation</span>
+              <Coffee className="text-[#F16522]" size={20} />
+              <span className="text-[#4A4A4A]">Wellness & Relaxation</span>
             </div>
             <div className="flex items-center space-x-3">
-              <MapPin className="text-[#2C2C2C]" size={20} />
-              <span className="text-[#2C2C2C]">Travel & Logistics</span>
+              <MapPin className="text-[#F16522]" size={20} />
+              <span className="text-[#4A4A4A]">Travel & Logistics</span>
             </div>
             <div className="flex items-center space-x-3">
               <Calendar className="text-[#F16522]" size={20} />
-              <span className="text-[#2C2C2C]">Celebrations & Events</span>
+              <span className="text-[#4A4A4A]">Celebrations & Events</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Clock className="text-[#F16522]" size={20} />
+              <span className="text-[#4A4A4A]">Admin & Check-in/out</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#2C2C2C] text-white py-12">
+      <footer className="bg-[#4A4A4A] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold mb-4">BOT Consulting</h3>
           <p className="text-white/70">

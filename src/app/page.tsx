@@ -42,7 +42,7 @@ export default function Home() {
               
               {/* Subtitle */}
               <h2 className="text-2xl md:text-3xl text-amber-100 mb-6 font-medium drop-shadow-md text-center">
-              Shaping Tomorrow, Together!
+              BOT Annual Retreat
               </h2>
               
               {/* Action Button */}
@@ -70,7 +70,7 @@ export default function Home() {
                 Countdown to the Event
               </h2>
               <p className="text-lg text-[#4A4A4A] max-w-3xl mx-auto">
-                Join us on October 24th, 2025 for an unforgettable experience in the beautiful city of Jaipur
+              Jaipur is calling & BOT is ready to deliver the most unforgettable culture, collaboration & fun!
               </p>
             </div>
             
@@ -103,8 +103,8 @@ export default function Home() {
                 <p className="text-[#4A4A4A] text-sm">Immerse yourself in vibrant performances, traditions, and celebrations</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#E17100] mb-2">State of the Union</h3>
-                <p className="text-[#4A4A4A] text-sm">Gain insights and inspiration from thought-provoking talks and discussions</p>
+                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Fireside Chat</h3>
+                <p className="text-[#4A4A4A] text-sm">An exclusive conversation with industry leaders to gain insights, and build meaningful connections.</p>
               </div>
             </div>
           </div>
@@ -123,7 +123,6 @@ export default function Home() {
               <div className="flex justify-center space-x-8 mb-8">
                 <Link href="/about" className="text-[#4A4A4A] hover:text-amber-900 transition-colors text-lg font-medium">About</Link>
                 <Link href="/itinerary" className="text-[#4A4A4A] hover:text-amber-900 transition-colors text-lg font-medium">Itinerary</Link>
-                <Link href="/hackathon" className="text-[#4A4A4A] hover:text-amber-900 transition-colors text-lg font-medium">Hackathon</Link>
                 <Link href="/contact" className="text-[#4A4A4A] hover:text-amber-900 transition-colors text-lg font-medium">Contact</Link>
               </div>
               {/* <div className="border-t border-amber-300/30 pt-6">
