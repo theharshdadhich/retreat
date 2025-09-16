@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Navigation from '@/components/Navigation'
-import { Mail, Phone, MapPin, Calendar, Users, Clock, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Calendar, Users, Clock, Send, Download } from 'lucide-react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -49,24 +49,32 @@ export default function Contact() {
     }, 3000)
   }
 
+  // Add download function
+  const handleDownloadItinerary = () => {
+    // Create a temporary anchor element
+    const link = document.createElement('a')
+    link.href = '/docs/bot-retreat-itinerary.pdf'
+    link.download = 'BOT_Retreat_Itinerary_2025.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   const contactInfo = [
     {
       icon: <Mail className="text-[#42C3D6]" size={24} />,
       title: 'Email',
-      details: ['info@botconsulting.com', 'retreat@botconsulting.com'],
-      description: 'Send us an email anytime'
+      details: ['annualretreat@botconsulting.io']
     },
     {
       icon: <Phone className="text-[#F16522]" size={24} />,
       title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
-      description: 'Call us during business hours'
+      details: ['+91 9256768903', '+91 8551960354']
     },
     {
       icon: <MapPin className="text-[#2C2C2C]" size={24} />,
       title: 'Office',
-      details: ['123 Business Street', 'Tech City, TC 12345'],
-      description: 'Visit our headquarters'
+      details: ['IT-A-017 Mahindra World City', 'Multi-product SEZ, Kalwara', '302037']
     }
   ]
 
@@ -74,20 +82,12 @@ export default function Contact() {
     {
       icon: <Calendar className="text-[#42C3D6]" size={24} />,
       title: 'Dates',
-      details: ['October 24-26, 2024'],
-      description: '3-day retreat experience'
+      details: ['October 24-26, 2025']
     },
     {
       icon: <MapPin className="text-[#F16522]" size={24} />,
       title: 'Venue',
-      details: ['Luxury Resort & Spa', 'Mountain View, MV 54321'],
-      description: 'Beautiful retreat location'
-    },
-    {
-      icon: <Users className="text-[#42C3D6]" size={24} />,
-      title: 'Capacity',
-      details: ['50+ Participants', 'Including families'],
-      description: 'Limited spots available'
+      details: ['Rajasthali Resort & Spa Jaipur']
     }
   ]
 
@@ -103,7 +103,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Have questions about the retreat? Want to register? We&apos;d love to hear from you!
+              Have questions about the retreat? We&apos;d love to hear from you!
             </p>
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+              <h2 className="text-2xl font-bold text-[#4A4A4A] mb-6">Send us a Message</h2>
               
               {isSubmitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
@@ -194,26 +194,6 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-                  
-                  <div>
-                    <label htmlFor="interestedIn" className="block text-sm font-medium text-gray-700 mb-2">
-                      I&apos;m interested in:
-                    </label>
-                    <select
-                      id="interestedIn"
-                      name="interestedIn"
-                      value={formData.interestedIn}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="general">General Information</option>
-                      <option value="registration">Retreat Registration</option>
-                      <option value="hackathon">Hackathon Details</option>
-                      <option value="partnership">Partnership Opportunities</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Message *
@@ -255,7 +235,7 @@ export default function Contact() {
             <div className="space-y-8">
               {/* General Contact */}
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold text-[#4A4A4A] mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start space-x-4">
@@ -263,13 +243,12 @@ export default function Contact() {
                         {info.icon}
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-1">{info.title}</h3>
+                        <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">{info.title}</h3>
                         <div className="space-y-1">
                           {info.details.map((detail, detailIndex) => (
-                            <p key={detailIndex} className="text-gray-600">{detail}</p>
+                            <p key={detailIndex} className="text-[#4A4A4A]">{detail}</p>
                           ))}
                         </div>
-                        <p className="text-sm text-gray-500 mt-2">{info.description}</p>
                       </div>
                     </div>
                   ))}
@@ -278,7 +257,7 @@ export default function Contact() {
 
               {/* Retreat Details */}
               <div className="bg-blue-50 rounded-lg p-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Retreat Details</h2>
+                <h2 className="text-2xl font-bold text-[#4A4A4A] mb-6">Retreat Details</h2>
                 <div className="space-y-6">
                   {retreatDetails.map((detail, index) => (
                     <div key={index} className="flex items-start space-x-4">
@@ -286,45 +265,15 @@ export default function Contact() {
                         {detail.icon}
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-1">{detail.title}</h3>
+                        <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">{detail.title}</h3>
                         <div className="space-y-1">
                           {detail.details.map((info, infoIndex) => (
-                            <p key={infoIndex} className="text-gray-600">{info}</p>
+                            <p key={infoIndex} className="text-[#4A4A4A]">{info}</p>
                           ))}
                         </div>
-                        <p className="text-sm text-gray-500 mt-2">{detail.description}</p>
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              {/* Business Hours */}
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h2>
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Clock className="text-gray-600" size={24} />
-                  </div>
-                  <div>
-                    <div className="space-y-2">
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Monday - Friday:</span>
-                        <span className="text-gray-900 font-medium">9:00 AM - 6:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Saturday:</span>
-                        <span className="text-gray-900 font-medium">10:00 AM - 4:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Sunday:</span>
-                        <span className="text-gray-900 font-medium">Closed</span>
-                      </div>
-                    </div>
-                    <p className="text-sm text-gray-500 mt-3">
-                      For urgent matters, please call our emergency line: +1 (555) 999-8888
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -336,8 +285,8 @@ export default function Contact() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#4A4A4A] mb-4">Frequently Asked Questions</h2>
+            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
               Find answers to common questions about the retreat
             </p>
           </div>
@@ -345,45 +294,38 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Which expenses will BOT cover during the retreat, and how should travel be arranged?</h3>
-                <p className="text-gray-600">
+                <h3 className="text-lg font-semibold text-[#4A4A4A] mb-2">Which expenses will BOT cover during the retreat, and how should travel be arranged?</h3>
+                <p className="text-[#4A4A4A]">
                   BOT will cover your accommodation, meals, retreat activities, and all official events. For participants traveling from outside Jaipur, you are requested to book your own tickets. The cost of these tickets will be reimbursed by BOT in line with company policy.
                 </p>
               </div>
               
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I bring my family, and will there be activities for them?</h3>
-                <p className="text-gray-600">
+                <h3 className="text-lg font-semibold text-[#4A4A4A] mb-2">Can I bring my family, and will there be activities for them?</h3>
+                <p className="text-[#4A4A4A]">
                 Yes! You&apos;re welcome to bring your spouse and kids. We&apos;ve planned family-friendly activities such as cultural evenings, Diwali celebrations, and sports, so everyone can enjoy the retreat together.
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I bring my family?</h3>
-                <p className="text-gray-600">
-                  Yes! We welcome families and have special activities planned for children and spouses.
                 </p>
               </div>
             </div>
             
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What should I bring?</h3>
-                <p className="text-gray-600">
-                  Comfortable clothing, laptop for hackathon, business casual for meetings, and any personal items you need.
+                <h3 className="text-lg font-semibold text-[#4A4A4A] mb-2">What items should I prepare to bring?</h3>
+                <p className="text-[#4A4A4A]">
+                It is advisable to bring comfortable attire, a laptop for the hackathon, business casual clothing for meetings, and any personal essentials you may require.
                 </p>
               </div>
               
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Is transportation provided?</h3>
-                <p className="text-gray-600">
+                <h3 className="text-lg font-semibold text-[#4A4A4A] mb-2">Is transportation provided?</h3>
+                <p className="text-[#4A4A4A]">
                   Transportation to and from the resort will be arranged. Details will be provided upon registration.
                 </p>
               </div>
               
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What if I have dietary restrictions?</h3>
-                <p className="text-gray-600">
+                <h3 className="text-lg font-semibold text-[#4A4A4A] mb-2">What if I have dietary restrictions?</h3>
+                <p className="text-[#4A4A4A]">
                   Please let us know in advance, and we&apos;ll ensure all dietary requirements are accommodated.
                 </p>
               </div>
@@ -393,18 +335,19 @@ export default function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#F16522]">
+      <section className="py-16 bg-[#FF914D]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Join Us?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Don&apos;t miss out on this incredible opportunity to connect, innovate, and celebrate with the BOT family
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#F16522] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-              Register Now
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-[#F16522] transition-colors">
-              Download Brochure
+            <button 
+              onClick={handleDownloadItinerary}
+              className="bg-white text-[#F16522] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center mx-auto"
+            >
+              <Download className="mr-2" size={20} />
+              Download Itinerary
             </button>
           </div>
         </div>
@@ -417,14 +360,6 @@ export default function Contact() {
           <p className="text-white/70 mb-6">
             Annual Company Retreat 2025 • October 24-26
           </p>
-          <div className="flex justify-center space-x-6">
-            <a href="mailto:info@botconsulting.com" className="text-white/70 hover:text-white transition-colors">
-              info@botconsulting.com
-            </a>
-            <a href="tel:+15551234567" className="text-white/70 hover:text-white transition-colors">
-              +1 (555) 123-4567
-            </a>
-          </div>
         </div>
       </footer>
     </main>
