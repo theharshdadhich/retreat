@@ -22,21 +22,21 @@ export default function SportsPage() {
               <Volleyball className="text-[#F97316]" />
             </div>
             <h3 className="text-xl font-semibold text-amber-900 mb-2">Team Matches</h3>
-            <p className="text-amber-800">Volleyball, football, and relay games to build collaboration and energy.</p>
+            <p className="text-amber-800">Get ready for friendly competition! Whether you’re a pro player or just in for the fun, our team-based matches promise action, laughter, and unforgettable moments on the field.</p>
           </div>
           <div className="bg-white rounded-xl shadow-md p-6">
             <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
               <Dumbbell className="text-[#F97316]" />
             </div>
-            <h3 className="text-xl font-semibold text-amber-900 mb-2">Fitness Challenges</h3>
-            <p className="text-amber-800">Fun obstacle courses and strength challenges for all fitness levels.</p>
+            <h3 className="text-xl font-semibold text-amber-900 mb-2">What to Expect?</h3>
+            <p className="text-amber-800">Bring your team spirit, build lasting bonds on the field, and show up in your retreat swag to keep the energy high.</p>
           </div>
           <div className="bg-white rounded-xl shadow-md p-6">
             <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
               <Trophy className="text-[#F97316]" />
             </div>
-            <h3 className="text-xl font-semibold text-amber-900 mb-2">Awards & Recognition</h3>
-            <p className="text-amber-800">Celebrate team spirit with medals and shout-outs for standout performances.</p>
+            <h3 className="text-xl font-semibold text-amber-900 mb-2">Win Prizes</h3>
+            <p className="text-amber-800">It&apos;s not just about glory—it&apos;s about rewards too! From fun goodies to bragging rights, every effort counts.</p>
           </div>
         </div>
       </section>
