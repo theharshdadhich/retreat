@@ -242,7 +242,6 @@ const getParticipantColor = (participants: string) => {
 // Participant groups for filtering
 const participantGroups = [
   { id: 'all', name: 'All Activities' },
-  { id: 'everyone', name: 'Everyone' },
   { id: 'botTeam', name: 'BOT Team' },
   { id: 'founders', name: 'Founders, CAB' },
   { id: 'kids', name: 'Kids & Families' }
@@ -256,9 +255,9 @@ export default function Itinerary() {
     
     return activities.filter(activity => {
       if (activeFilter === 'everyone') return activity.participants.includes('Everyone')
-      if (activeFilter === 'botTeam') return activity.participants.includes('BOT Team')
-      if (activeFilter === 'founders') return activity.participants.includes('Founders') || activity.participants.includes('CAB')
-      if (activeFilter === 'kids') return activity.participants.includes('Kids')
+      if (activeFilter === 'botTeam') return activity.participants.includes('BOT Team') || activity.participants.includes('Everyone')
+      if (activeFilter === 'founders') return activity.participants.includes('Founders') || activity.participants.includes('CAB') || activity.participants.includes('Everyone')
+      if (activeFilter === 'kids') return activity.participants.includes('Kids') || activity.participants.includes('Everyone')
       return true
     })
   }
@@ -364,9 +363,11 @@ export default function Itinerary() {
                           </p>
                           
                           <div className="mt-auto">
-                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${getParticipantColor(activity.participants)}`}>
-                              {activity.participants}
-                            </span>
+                            {activeFilter === 'all' && (
+                              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getParticipantColor(activity.participants)}`}>
+                                {activity.participants}
+                              </span>
+                            )}
                           </div>
                         </div>
                       </div>
