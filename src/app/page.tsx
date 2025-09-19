@@ -15,7 +15,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/tan.png" // Your image path
+            src="/1000017724.png" // Your image path
             alt="Scenic landscape of Jaipur"
             layout="fill"
             objectFit="cover"
