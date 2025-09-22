@@ -277,7 +277,10 @@ export default function Itinerary() {
               Game Plan
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Your playbook for 3 days of big ideas, mindful breaks, and celebrations worth remembering.
+            Your playbook for 3 days of big ideas, mindful breaks, 
+            </p>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+             and celebrations worth remembering.
             </p>
           </div>
         </div>

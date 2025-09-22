@@ -22,28 +22,31 @@ export default function CulturalNightPage() {
               <Music className="text-[#F97316]" />
             </div>
             <h3 className="text-xl font-semibold text-amber-900 mb-2">Live Performances</h3>
-            <p className="text-amber-800">Enjoy folk music and dance highlighting the rich culture of Rajasthan.</p>
+            <p className="text-amber-800">Immerse yourself in the vibrant spirit of Rajasthan with soulful folk music and graceful dance performances that bring its rich culture to life.</p>
           </div>
           <div className="bg-white rounded-xl shadow-md p-6">
             <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
               <Sparkles className="text-[#F97316]" />
             </div>
             <h3 className="text-xl font-semibold text-amber-900 mb-2">Traditional Attire</h3>
-            <p className="text-amber-800">Dress up in ethnic wear; best-dressed recognitions and photo booths.</p>
+            <p className="text-amber-800">Dress up in ethnic wear and join us in making the day eventful and festive.</p>
           </div>
           <div className="bg-white rounded-xl shadow-md p-6">
             <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
               <CalendarHeart className="text-[#F97316]" />
             </div>
             <h3 className="text-xl font-semibold text-amber-900 mb-2">Festive Dinner</h3>
-            <p className="text-amber-800">Relish a curated menu of regional specialties and sweets.</p>
+            <p className="text-amber-800">Savor a specially curated feast of regional delicacies and authentic sweets, crafted to give you the true taste of Rajasthan.</p>
           </div>
         </div>
       </section>
 
-      <footer className="bg-[#2C2C2C] text-white py-12">
+      <footer className="bg-[#4A4A4A] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70">Part of the BOT Consulting Annual Retreat 2025</p>
+          <h3 className="text-2xl font-bold mb-4">BOT Consulting</h3>
+          <p className="text-white/70">
+            Annual Company Retreat • October 24-26
+          </p>
         </div>
       </footer>
     </main>

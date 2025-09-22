@@ -41,9 +41,12 @@ export default function SportsPage() {
         </div>
       </section>
 
-      <footer className="bg-[#2C2C2C] text-white py-12">
+      <footer className="bg-[#4A4A4A] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70">Part of the BOT Consulting Annual Retreat 2025</p>
+          <h3 className="text-2xl font-bold mb-4">BOT Consulting</h3>
+          <p className="text-white/70">
+            Annual Company Retreat • October 24-26
+          </p>
         </div>
       </footer>
     </main>

@@ -326,11 +326,11 @@ export default function About() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#2C2C2C] text-white py-12">
+      <footer className="bg-[#4A4A4A] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold mb-4">BOT Consulting</h3>
           <p className="text-white/70">
-            Transforming businesses through innovative technology solutions
+            Annual Company Retreat • October 24-26
           </p>
         </div>
       </footer>
