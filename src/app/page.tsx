@@ -1,3 +1,5 @@
+'use client'
+
 import Navigation from '@/components/Navigation'
 import { Calendar } from 'lucide-react'
 import Link from 'next/link'
@@ -5,6 +7,7 @@ import Image from 'next/image'
 import CountdownTimer from '@/components/CountdownTimer'
 
 export default function Home() {
+
   return (
     <main className="min-h-screen">
       
@@ -83,13 +86,13 @@ export default function Home() {
         <section className="py-20 bg-[#FEF6EC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-[#E17100] mb-6">
-            Retreat Highlights
+              Retreat Highlights
             </h2>
-            <p className="text-lg text-[#4A4A4A] mb-12 max-w-3xl mx-auto">
-            A retreat dedicated to growth, culture, and the future we&apos;re building together.
+            <p className="text-lg text-[#4A4A4A] mb-6 max-w-3xl mx-auto">
+              A retreat dedicated to growth, culture, and the future we&apos;re building together.
             </p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Highlights grid */}
+            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6`}>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
                 <h3 className="text-lg font-semibold text-[#E17100] mb-2">Hackathons</h3>
                 <p className="text-[#4A4A4A] text-sm">Unleash innovation and creativity through problem-solving challenges</p>

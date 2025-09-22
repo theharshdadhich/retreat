@@ -92,6 +92,7 @@ const Navigation = () => {
 
             <div className="border-t border-amber-100 pt-2">
               <p className="px-3 pb-1 text-xs uppercase tracking-wider text-amber-700">Experiences</p>
+              
               <Link href="/hackathon" className={mobileLinkClass('/hackathon')} onClick={() => setIsOpen(false)}>
                 Hackathon
               </Link>
