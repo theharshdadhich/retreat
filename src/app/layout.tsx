@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'BOT Consulting - Annual Company Retreat 2025',
-  description: 'Join us for an exciting 3-day retreat filled with hackathons, wellness activities, cultural celebrations, and team building. October 24-26, 2024.',
+  description: 'Join us for an exciting 3-day retreat filled with hackathons, wellness activities, cultural celebrations, and team building. October 24-26, 2025.',
   keywords: 'BOT Consulting, company retreat, hackathon, wellness, team building, Diwali celebration',
 }
 

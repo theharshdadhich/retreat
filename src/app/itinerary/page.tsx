@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Navigation from '@/components/Navigation'
 import { Calendar, Clock, Users, MapPin, Coffee, Utensils, Activity, Filter } from 'lucide-react'
 
@@ -249,6 +249,15 @@ const participantGroups = [
 
 export default function Itinerary() {
   const [activeFilter, setActiveFilter] = useState('all')
+  const dayRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  const scrollToDay = (index: number) => {
+    if (typeof window === 'undefined') return
+    const el = dayRefs.current[index]
+    if (!el) return
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 80
+    window.scrollTo({ top: y, behavior: 'smooth' })
+  }
 
   const filterActivities = (activities: any[]) => {
     if (activeFilter === 'all') return activities
@@ -261,9 +270,6 @@ export default function Itinerary() {
       return true
     })
   }
-
-  // Find the maximum number of activities across all days
-  const maxActivities = Math.max(...itineraryData.map(day => day.activities.length))
 
   return (
     <main className="min-h-screen bg-orange-50">
@@ -313,13 +319,20 @@ export default function Itinerary() {
         </div>
       </section>
 
-      {/* Itinerary Content - Horizontal Timeline */}
+      {/* Itinerary Content */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Day Headers */}
+          {/* Day Headers - Clickable on mobile */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
-            {itineraryData.map((day) => (
-              <div key={day.day} className="text-center bg-white rounded-lg shadow-sm p-4 sm:p-6">
+            {itineraryData.map((day, idx) => (
+              <div 
+                key={day.day} 
+                className="text-center bg-white rounded-lg shadow-sm p-4 sm:p-6 cursor-pointer active:scale-[0.98] transition md:cursor-default"
+                onClick={() => scrollToDay(idx)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') scrollToDay(idx) }}
+              >
                 <h2 className="text-xl sm:text-2xl font-bold text-[#4A4A4A] mb-2">
                   Day {day.day}
                 </h2>
@@ -328,23 +341,28 @@ export default function Itinerary() {
             ))}
           </div>
 
-          {/* Activities Grid with Equal Height Rows */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {/* Activities Grid - Different layout for mobile vs desktop */}
+          <div className="lg:grid lg:grid-cols-3 lg:gap-6 space-y-8 lg:space-y-0">
             {itineraryData.map((day, dayIndex) => (
-              <div key={day.day} className="flex flex-col">
-                {/* Day Label for Mobile */}
-                <div className="lg:hidden bg-[#F97316] text-white px-3 py-2 rounded-lg text-center font-semibold text-sm mb-4">
-                  Day {day.day} - {day.date}
+              <div 
+                key={day.day} 
+                className="flex flex-col"
+                ref={(el) => { dayRefs.current[dayIndex] = el }}
+              >
+                {/* Day Label for Mobile - Only show on mobile */}
+                <div className="lg:hidden bg-[#F97316] text-white px-4 py-3 rounded-lg text-center font-semibold text-lg mb-6">
+                  <h2 className="font-bold">Day {day.day}</h2>
+                  <p className="text-white/90">{day.date}</p>
                 </div>
                 
-                {/* Activities Container with Equal Height Boxes */}
-                <div className="grid grid-rows-1 gap-4 sm:gap-6 flex-1" style={{ gridTemplateRows: `repeat(${maxActivities}, minmax(0, 1fr))` }}>
+                {/* Activities Container - Simple column layout for mobile */}
+                <div className="space-y-4 sm:space-y-6">
                   {filterActivities(day.activities).map((activity, activityIndex) => (
                     <div 
                       key={activityIndex}
-                      className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-200 hover:scale-105 relative h-full flex flex-col"
+                      className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-200 lg:hover:scale-105 flex flex-col"
                     >
-                      <div className="flex items-start space-x-3 flex-1">
+                      <div className="flex items-start space-x-3">
                         <div className="flex-shrink-0">
                           <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
                             {getActivityIcon(activity.type)}
@@ -361,11 +379,11 @@ export default function Itinerary() {
                             </span>
                           </div>
                           
-                          <p className="text-xs text-[#4A4A4A] mb-3 line-clamp-2">
+                          <p className="text-xs text-[#4A4A4A] mb-3">
                             {activity.description}
                           </p>
                           
-                          <div className="mt-auto">
+                          <div>
                             {activeFilter === 'all' && (
                               <span className={`px-2 py-1 rounded-full text-xs font-medium ${getParticipantColor(activity.participants)}`}>
                                 {activity.participants}
@@ -376,14 +394,12 @@ export default function Itinerary() {
                       </div>
                     </div>
                   ))}
-                  
-                  {/* Add empty boxes to maintain equal height across columns */}
-                  {filterActivities(day.activities).length < maxActivities && 
-                    Array.from({ length: maxActivities - filterActivities(day.activities).length }).map((_, index) => (
-                      <div key={`empty-${index}`} className="invisible"></div>
-                    ))
-                  }
                 </div>
+
+                {/* Add spacing between days on mobile */}
+                {dayIndex < itineraryData.length - 1 && (
+                  <div className="lg:hidden mt-8 mb-4 border-t border-orange-200/50"></div>
+                )}
               </div>
             ))}
           </div>
