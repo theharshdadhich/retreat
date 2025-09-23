@@ -3,12 +3,13 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false)
   const pathname = usePathname()
 
   const baseLinkClasses = 'px-4 py-2 rounded-full text-sm font-semibold transition-colors'
@@ -88,20 +89,57 @@ const Navigation = () => {
           <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-white/95 backdrop-blur border-b border-amber-100 shadow-lg">
             <Link href="/" className={mobileLinkClass('/')} onClick={() => setIsOpen(false)}>Home</Link>
             <Link href="/itinerary" className={mobileLinkClass('/itinerary')} onClick={() => setIsOpen(false)}>Itinerary</Link>
-            <Link href="/attendees" className={mobileLinkClass('/attendees')} onClick={() => setIsOpen(false)}>Attendees</Link>
+            {/* <Link href="/attendees" className={mobileLinkClass('/attendees')} onClick={() => setIsOpen(false)}>Attendees</Link> */}
 
-            <div className="border-t border-amber-100 pt-2">
-              <p className="px-3 pb-1 text-xs uppercase tracking-wider text-amber-700">Experiences</p>
+            {/* Mobile Experiences Dropdown */}
+            <div className="pt-2">
+              <button
+                onClick={() => setIsMobileDropdownOpen((v) => !v)}
+                className={`w-full text-left px-4 py-2 rounded-full text-base font-medium transition-colors flex items-center justify-between ${
+                  isExperiencesActive ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:text-amber-900 hover:bg-amber-50'
+                }`}
+              >
+                Experiences
+                <ChevronDown 
+                  size={16} 
+                  className={`transition-transform ${isMobileDropdownOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
               
-              <Link href="/hackathon" className={mobileLinkClass('/hackathon')} onClick={() => setIsOpen(false)}>
-                Hackathon
-              </Link>
-              <Link href="/cultural-night" className={mobileLinkClass('/cultural-night')} onClick={() => setIsOpen(false)}>
-                Cultural Night
-              </Link>
-              <Link href="/sports" className={mobileLinkClass('/sports')} onClick={() => setIsOpen(false)}>
-                Sports Activity
-              </Link>
+              {isMobileDropdownOpen && (
+                <div className="pl-4 mt-1 space-y-1">
+                  <Link 
+                    href="/hackathon" 
+                    className={mobileLinkClass('/hackathon')} 
+                    onClick={() => {
+                      setIsOpen(false)
+                      setIsMobileDropdownOpen(false)
+                    }}
+                  >
+                    Hackathon
+                  </Link>
+                  <Link 
+                    href="/cultural-night" 
+                    className={mobileLinkClass('/cultural-night')} 
+                    onClick={() => {
+                      setIsOpen(false)
+                      setIsMobileDropdownOpen(false)
+                    }}
+                  >
+                    Cultural Night
+                  </Link>
+                  <Link 
+                    href="/sports" 
+                    className={mobileLinkClass('/sports')} 
+                    onClick={() => {
+                      setIsOpen(false)
+                      setIsMobileDropdownOpen(false)
+                    }}
+                  >
+                    Sports Activity
+                  </Link>
+                </div>
+              )}
             </div>
 
             <Link href="/about" className={mobileLinkClass('/about')} onClick={() => setIsOpen(false)}>About BOT</Link>
