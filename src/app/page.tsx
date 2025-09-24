@@ -106,8 +106,8 @@ export default function Home() {
                 <p className="text-[#4A4A4A] text-sm">Immerse yourself in vibrant performances, traditions, and celebrations</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Fireside Chat</h3>
-                <p className="text-[#4A4A4A] text-sm">An exclusive conversation with industry leaders to gain insights, and build meaningful connections.</p>
+                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Rewards & Recognitiont</h3>
+                <p className="text-[#4A4A4A] text-sm">Celebrating BOTians with exciting prizes and recognition for their impact, teamwork, and spirit. It&apos;s our way of honoring excellence while making the moments unforgettable.</p>
               </div>
             </div>
           </div>
