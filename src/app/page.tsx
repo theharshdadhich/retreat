@@ -94,11 +94,11 @@ export default function Home() {
             {/* Highlights grid */}
             <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6`}>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Hackathons</h3>
+                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Hackathon</h3>
                 <p className="text-[#4A4A4A] text-sm">Unleash innovation and creativity through problem-solving challenges</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Sports </h3>
+                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Funbug Friday </h3>
                 <p className="text-[#4A4A4A] text-sm">Experience the thrill of competition and team spirit in exciting games</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
@@ -106,7 +106,7 @@ export default function Home() {
                 <p className="text-[#4A4A4A] text-sm">Immerse yourself in vibrant performances, traditions, and celebrations</p>
               </div>
               <div className="bg-white rounded-xl p-6 ring-1 ring-amber-100 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Rewards & Recognitiont</h3>
+                <h3 className="text-lg font-semibold text-[#E17100] mb-2">Rewards & Recognitions</h3>
                 <p className="text-[#4A4A4A] text-sm">Honoring BOTians with prizes and recognition for their impact, teamwork, and spirit.</p>
               </div>
             </div>

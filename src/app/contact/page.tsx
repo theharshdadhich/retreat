@@ -2,53 +2,9 @@
 
 import { useState } from 'react'
 import Navigation from '@/components/Navigation'
-import { Mail, Phone, MapPin, Calendar, Users, Clock, Send, Download } from 'lucide-react'
+import { Mail, Phone, MapPin, Calendar, Download } from 'lucide-react'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
-    interestedIn: 'general'
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        interestedIn: 'general'
-      })
-    }, 3000)
-  }
-
   // Add download function
   const handleDownloadItinerary = () => {
     // Create a temporary anchor element
@@ -109,127 +65,21 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form and Info */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-2xl font-bold text-[#4A4A4A] mb-6">Send us a Message</h2>
-              
-              {isSubmitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-                  <div className="text-green-600 mb-2">
-                    <Send size={48} className="mx-auto" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-green-800 mb-2">Message Sent!</h3>
-                  <p className="text-green-700">
-                    Thank you for your message. We&apos;ll get back to you within 24 hours.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your company name"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tell us how we can help you..."
+      {/* Contact Info and Mascot */}
+          <section className="py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                {/* BOT Mascot Image - Reduced size to match content height */}
+                <div className="flex items-center justify-center">
+                  <div className="w-full max-w-md">
+                    <img 
+                      src="/images/ripper.webp" 
+                      alt="BOT Consulting Mascot"
+                      className="w-full h-auto object-contain"
                     />
                   </div>
-                  
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-[#42C3D6] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#42C3D6]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="mr-2" size={20} />
-                        Send Message
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
-            </div>
+                </div>
+
 
             {/* Contact Information */}
             <div className="space-y-8">
@@ -256,7 +106,7 @@ export default function Contact() {
               </div>
 
               {/* Retreat Details */}
-              <div className="bg-blue-50 rounded-lg p-6">
+              <div className="bg-orange-50 rounded-lg p-6">
                 <h2 className="text-2xl font-bold text-[#4A4A4A] mb-6">Retreat Details</h2>
                 <div className="space-y-6">
                   {retreatDetails.map((detail, index) => (

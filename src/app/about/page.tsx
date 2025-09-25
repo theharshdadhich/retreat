@@ -154,10 +154,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              About BOT Consulting
+              About Us
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              A Venture Studio for GDCs - We build, operate, and transfer high-value GDCs as venture-scale assets!
+              A Venture Studio for GDCs - We build, operate, and transfer high value GDCs as venture-scale assets!
             </p>
           </div>
         </div>
@@ -202,11 +202,10 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Odyssey: The BOT Way</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Odyssey is not just our annual retreat—it's our philosophy of the Build–Operate–Transfer journey. 
-                Just like an odyssey, every GDC engagement is a shared journey of growth, transformation, and discovery.
+              Odyssey is not just our annual retreat — it&apos;s our philosophy of the Build–Operate–Transfer journey. Just like an odyssey, every GDC engagement is a shared journey of growth, transformation, and discovery.
               </p>
               <p className="text-lg text-gray-600">
-                At Odyssey 2025, we come together to celebrate this journey—bringing BOTians, leaders, clients, 
+                At Odyssey 2025, we come together to celebrate this journey — bringing BOTians, leaders, clients, 
                 and partners into one shared space of innovation and culture.
               </p>
             </div>
@@ -221,38 +220,10 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold text-[#2C2C2C] mt-4 mb-2">Meet Ripper</h3>
               <p className="text-[#2C2C2C]/70">
-                Ripper, our mascot, represents the spirit of BOT's venture studio approach—bold, curious, and resilient. 
-                Much like our Build–Operate–Transfer model, Ripper embodies progress, adaptability, and community.
+                Ripper, our mascot, represents the spirit of BOT's venture studio approach — bold, curious, and resilient. 
+                Much like our Build – Operate – Transfer model, Ripper embodies progress, adaptability, and community.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Approach</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Combining AI precision, culture-first talent, and venture-scale impact
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="flex justify-center mb-4">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600">
-                  {value.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

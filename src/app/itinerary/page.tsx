@@ -66,7 +66,7 @@ const itineraryData = [
         description: 'Afternoon refreshments and networking'
       },
       {
-        time: '17:45 – 18:45',
+        time: '17:45 – 19:15',
         title: 'Fun Bug Friday',
         participants: 'Everyone',
         type: 'activity',
@@ -101,7 +101,7 @@ const itineraryData = [
       },
       {
         time: '11:00 – 12:30',
-        title: 'Hackathon',
+        title: 'Hackathon Presentations',
         participants: 'BOT Team',
         type: 'workshop',
         description: 'Main hackathon competition and coding challenges'
@@ -121,16 +121,16 @@ const itineraryData = [
         description: 'Lunch break with team discussions'
       },
       {
-        time: '15:00 – 16:00',
-        title: 'State of the Union',
+        time: '15:00 – 15:40',
+        title: 'Fireside Chat',
         participants: 'BOT Team',
         type: 'meeting',
         description: 'Company updates and future roadmap presentation'
       },
       {
-        time: '16:15 – 17:00',
-        title: 'Fireside Chat',
-        participants: 'BOT Team, Founders, CAB',
+        time: '16:00 – 17:00',
+        title: 'Give Back - Śrī',
+        participants: 'Everyone',
         type: 'meeting',
         description: 'Interactive Q&A session with leadership'
       },
