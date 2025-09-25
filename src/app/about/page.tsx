@@ -56,7 +56,7 @@ const teamMembers = [
   {
     name: "Deepali Puri",
     role: "Co-Founder",
-    image: "/images/about/team/deepali.jpg"
+    image: "/images/about/team/cfg.webp"
   },
   {
     name: "Daminder Kaur",
@@ -134,7 +134,7 @@ const cabMembers = [
   {
     name: "Christian H Jensen",
     company: "Agentic First",
-    image: "/images/about/cab/nick.jpg"
+    image: "/images/about/cab/download.webp"
   },
   {
     name: "Jacob Moller",
