@@ -51,47 +51,47 @@ const teamMembers = [
   {
     name: "Manpreet Singh",
     role: "CEO, Co-Founder",
-    image: "/images/about/team/manpreet.jpg"
+    image: "/images/about/team/manpreet.webp"
   },
   {
     name: "Deepali Puri",
     role: "Co-Founder",
-    image: "/images/about/team/cfg.webp"
+    image: "/images/about/team/deepali.webp"
   },
   {
     name: "Daminder Kaur",
     role: "Director - Śrī",
-    image: "/images/about/team/daminder.jpg"
+    image: "/images/about/team/daminder.webp"
   },
   {
     name: "Abhinav Gehlot",
     role: "Director - Software Engineering",
-    image: "/images/about/team/abhinav.jpg"
+    image: "/images/about/team/abhinav.webp"
   },
   {
     name: "Ajai Pal Singh",
     role: "Director - Integrations & Analytics",
-    image: "/images/about/team/ajai.jpg"
+    image: "/images/about/team/ajai.webp"
   },
   {
     name: "Mitul Vyas",
     role: "Director - Data Engineering & Analytics",
-    image: "/images/about/team/mitul.jpg"
+    image: "/images/about/team/mitul.webp"
   },
   {
     name: "Niharika Nagrath",
     role: "General Counsel",
-    image: "/images/about/team/niharika.jpg"
+    image: "/images/about/team/niharika.webp"
   },
   {
     name: "Saloni G Sharma",
     role: "Director - Digital Workflow Enterprise",
-    image: "/images/about/team/saloni.jpg"
+    image: "/images/about/team/saloni.webp"
   },
   {
     name: "Sulok Sharma",
     role: "Director - Finance & Operations",
-    image: "/images/about/team/sulok.jpg"
+    image: "/images/about/team/sulok.webp"
   }
 ]
 
@@ -99,47 +99,47 @@ const cabMembers = [
   {
     name: "Chris Barbin",
     company: "Tercera",
-    image: "/images/about/cab/chris.jpg"
+    image: "/images/about/cab/chris.webp"
   },
   {
     name: "Lisa Burton",
     company: "Tercera",
-    image: "/images/about/cab/lisa.jpg"
+    image: "/images/about/cab/lisa.webp"
   },
   {
     name: "Michelle Swan",
     company: "Tercera",
-    image: "/images/about/cab/michelle.jpg"
+    image: "/images/about/cab/michelle.webp"
   },
   {
     name: "Erik Duffield",
     company: "Hakkoda",
-    image: "/images/about/cab/erik.jpg"
+    image: "/images/about/cab/erik.webp"
   },
   {
     name: "Glenn Weinstein",
     company: "Cloudsmith",
-    image: "/images/about/cab/glenn.jpg"
+    image: "/images/about/cab/glenn.webp"
   },
   {
     name: "Nick Peacock",
     company: "Cloudsmith",
-    image: "/images/about/cab/nick.jpg"
+    image: "/images/about/cab/nick.webp"
   },
   {
     name: "Colin Moynes",
     company: "Cloudsmith",
-    image: "/images/about/cab/colin.jpg"
+    image: "/images/about/cab/colin.webp"
   },
   {
     name: "Christian H Jensen",
     company: "Agentic First",
-    image: "/images/about/cab/download.webp"
+    image: "/images/about/cab/christian.webp"
   },
   {
     name: "Jacob Moller",
     company: "Agentic First",
-    image: "/images/about/cab/jacob.jpg"
+    image: "/images/about/cab/jacob.webp"
   }
 ]
 

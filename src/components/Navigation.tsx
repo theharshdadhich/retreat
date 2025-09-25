@@ -33,7 +33,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <Image
-                src="/Asset 8@4x.png"
+                src="/Asset 8@4x.webp"
                 alt="BOT Consulting"
                 width={180}
                 height={40}
