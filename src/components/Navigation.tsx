@@ -33,7 +33,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <Image
-                src="/Asset 8@4x.webp"
+                src="/logo.webp"
                 alt="BOT Consulting"
                 width={180}
                 height={40}
@@ -46,7 +46,7 @@ const Navigation = () => {
           {/* Desktop Navigation - explicit order */}
           <div className="hidden md:flex items-center space-x-3">
             <Link href="/" className={linkClass('/')}>Home</Link>
-            <Link href="/itinerary" className={linkClass('/itinerary')}>Itinerary</Link>
+            <Link href="/itinerary" className={linkClass('/itinerary/')}>Itinerary</Link>
             {/* <Link href="/attendees" className={linkClass('/attendees')}>Attendees</Link> */}
 
             {/* Experiences Dropdown */}
@@ -60,15 +60,15 @@ const Navigation = () => {
               </button>
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-56 bg-white border border-amber-100 rounded-xl shadow-lg py-2">
-                  <Link href="/hackathon" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/hackathon' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Hackathon</Link>
-                  <Link href="/cultural-night" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/cultural-night' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Cultural Night</Link>
-                  <Link href="/sports" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/sports' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Sports Activity</Link>
+                  <Link href="/hackathon" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/hackathon/' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Hackathon</Link>
+                  <Link href="/cultural-night" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/cultural-night/' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Cultural Night</Link>
+                  <Link href="/sports" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/sports/' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Sports Activity</Link>
                 </div>
               )}
             </div>
 
-            <Link href="/about" className={linkClass('/about')}>About BOT</Link>
-            <Link href="/contact" className={linkClass('/contact')}>Contact</Link>
+            <Link href="/about" className={linkClass('/about/')}>About BOT</Link>
+            <Link href="/contact" className={linkClass('/contact/')}>Contact</Link>
           </div>
 
           {/* Mobile menu button */}

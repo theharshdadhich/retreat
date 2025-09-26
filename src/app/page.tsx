@@ -118,7 +118,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex items-center justify-center mb-6">
-                <Image src="/Asset 8@4x.webp" alt="BOT Consulting" width={260} height={60} className="h-14 w-auto" />
+                <Image src="/logo.webp" alt="BOT Consulting" width={260} height={60} className="h-14 w-auto" />
               </div>
               <p className="text-[#4A4A4A] text-lg mb-8">
                 Annual Company Retreat 2025 • October 24-26 • Jaipur, Rajasthan
