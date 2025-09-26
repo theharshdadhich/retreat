@@ -8,7 +8,7 @@ export default function SRIPage() {
 
       <section className="pt-16 bg-gradient-to-r from-[#FFD9A3] to-[#F87315]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Śrī Initiative</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Śrī Intiative</h1>
           <p className="text-white/90 text-lg max-w-2xl mx-auto">
           Giving back to the community through meaningful activities that create lasting impact.
           </p>
@@ -26,7 +26,7 @@ export default function SRIPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Education Worksheet Creation */}
-            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 ">
+            <div className="bg-white rounded-xl shadow-lg p-6 ">
             <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
               <Book className="text-[#F97316]" />
             </div>
@@ -39,7 +39,7 @@ export default function SRIPage() {
             </div>
 
             {/* Bird Feeder Making */}
-            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 ">
+            <div className="bg-white rounded-xl shadow-lg p-6 ">
                 <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
                     <Recycle className="text-[#F97316]" />
                 </div>
@@ -52,7 +52,7 @@ export default function SRIPage() {
             </div>
 
             {/* Cotton Bag Making */}
-            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 ">
+            <div className="bg-white rounded-xl shadow-lg p-6 ">
                 <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
                     <Paintbrush className="text-[#F97316]" />
                 </div>
