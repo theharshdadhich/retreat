@@ -63,6 +63,7 @@ const Navigation = () => {
                   <Link href="/hackathon" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/hackathon/' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Hackathon</Link>
                   <Link href="/cultural-night" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/cultural-night/' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Cultural Night</Link>
                   <Link href="/sports" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/sports/' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Sports Activity</Link>
+                  <Link href="/sri" className={`mx-2 my-1 block px-4 py-2 rounded-full text-sm ${pathname === '/sri/' ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:bg-amber-50'}`}>Śrī Initiative</Link>
                 </div>
               )}
             </div>

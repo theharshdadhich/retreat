@@ -130,16 +130,6 @@ const cabMembers = [
     name: "Colin Moynes",
     company: "Cloudsmith",
     image: "/images/about/cab/colin.webp"
-  },
-  {
-    name: "Christian H Jensen",
-    company: "Agentic First",
-    image: "/images/about/cab/christian.webp"
-  },
-  {
-    name: "Jacob Moller",
-    company: "Agentic First",
-    image: "/images/about/cab/jacob.webp"
   }
 ]
 
