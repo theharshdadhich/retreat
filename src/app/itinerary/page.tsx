@@ -177,7 +177,7 @@ const itineraryData = [
     activities: [
       {
         time: '07:00 – 08:00',
-        title: 'Sports Activity',
+        title: 'Recharge and Connect',
         participants: 'Everyone',
         type: 'activity',
         description: 'Morning sports and fitness activities'
