@@ -213,7 +213,7 @@ export default function About() {
               {/* Ripper mascot image - Fixed to show full image */}
               <div className="flex justify-center mb-4">
                 <img 
-                  src="/images/about/mascot.png" 
+                  src="/images/about/mascot.webp" 
                   alt="Ripper Mascot"
                   className="rounded-lg max-h-80 w-auto object-contain" // Changed to object-contain and max-h-80
                 />
