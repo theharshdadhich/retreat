@@ -49,49 +49,108 @@ const achievements = [
 
 const teamMembers = [
   {
-    name: "Manpreet Singh",
-    role: "CEO, Co-Founder",
-    image: "/images/about/team/manpreet.webp"
-  },
-  {
-    name: "Deepali Puri",
-    role: "Co-Founder",
-    image: "/images/about/team/deepali.webp"
-  },
-  {
-    name: "Daminder Kaur",
-    role: "Director - Śrī",
-    image: "/images/about/team/daminder.webp"
-  },
-  {
     name: "Abhinav Gehlot",
-    role: "Director - Software Engineering",
     image: "/images/about/team/abhinav.webp"
   },
   {
-    name: "Ajai Pal Singh",
-    role: "Director - Integrations & Analytics",
+    name: "Tanishka Jain",
+    image: "/images/about/team/tanishka.webp"
+  },
+  {
+    name: "Ajai Pal Singh Udawat",
     image: "/images/about/team/ajai.webp"
   },
   {
     name: "Mitul Vyas",
-    role: "Director - Data Engineering & Analytics",
-    image: "/images/about/team/mitul.webp"
+    image: "/images/about/team/mitul1.webp"
   },
   {
-    name: "Niharika Nagrath",
-    role: "General Counsel",
-    image: "/images/about/team/niharika.webp"
+    name: "Akshay Singh Thakur",
+    image: "/images/about/team/akshay.webp"
   },
   {
-    name: "Saloni G Sharma",
-    role: "Director - Digital Workflow Enterprise",
-    image: "/images/about/team/saloni.webp"
+    name: "Rishabh Garg",
+    image: "/images/about/team/rishabh1.webp"
   },
   {
-    name: "Sulok Sharma",
-    role: "Director - Finance & Operations",
-    image: "/images/about/team/sulok.webp"
+    name: "Harsh Dadhich",
+    image: "/images/about/team/harsh-dadhich.webp"
+  },
+  {
+    name: "Abhishek Suwalka",
+    image: "/images/about/team/suwalka.webp"
+  },
+  {
+    name: "Ashwarya Gupta",
+    image: "/images/about/team/ashwarya.webp"
+  },
+  {
+    name: "Himisha Tunwal",
+    image: "/images/about/team/himisha.webp"
+  },
+  {
+    name: "Kaushal Sharma",
+    image: "/images/about/team/kaushal.webp"
+  },
+  {
+    name: "Swasti Singhal",
+    image: "/images/about/team/swasti1.webp"
+  },
+  {
+    name: "Ankit Kumar",
+    image: "/images/about/team/ankit.webp"
+  },
+  {
+    name: "Chirag Bhayana",
+    image: "/images/about/team/bhayana.webp"
+  },
+  {
+    name: "Dhruv Agarwal",
+    image: "/images/about/team/dhruv.webp"
+  },
+  {
+    name: "Mohd. Fareedul Haque",
+    image: "/images/about/team/fareed.webp"
+  },
+  {
+    name: "Himanshu Mishra",
+    image: "/images/about/team/himanshu-mishra.webp"
+  },
+  {
+    name: "Mananya Gaur",
+    image: "/images/about/team/mananya.webp"
+  },
+  {
+    name: "Manoj Kumar",
+    image: "/images/about/team/manoj.webp"
+  },
+  {
+    name: "Nidhi Sharma",
+    image: "/images/about/team/nidhi-sharma.webp"
+  },
+  {
+    name: "Priyanka Indoria",
+    image: "/images/about/team/priyanka-indoria.webp"
+  },
+  {
+    name: "Ranjan Singh",
+    image: "/images/about/team/ranjan.webp"
+  },
+  {
+    name: "Srashti Soni",
+    image: "/images/about/team/srashti.webp"
+  },
+  {
+    name: "Vivek Modi",
+    image: "/images/about/team/vivek.webp"
+  },
+  {
+    name: "Yash Sharma",
+    image: "/images/about/team/yash-sharma.webp"
+  },
+  {
+    name: "Yuvraj Kishan Sharma",
+    image: "/images/about/team/yuvraj.webp"
   }
 ]
 
@@ -218,37 +277,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">OUR TEAM</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the leadership driving our venture studio forward
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                {/* Focus on the top part of the image to show heads */}
-                <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top" // Added object-top
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-gray-600 mb-2">{member.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CAB & Distinguished Guests */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,6 +297,31 @@ export default function About() {
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
                 <p className="text-gray-600">{member.company}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Volunteers */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">THE ODYSSEY RANGERS</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our all-rounder volunteer crew guiding everyone through the retreat, keeping the energy high, and making sure every moment runs smoothly!
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6 text-center">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="rounded-full w-32 h-32 mx-auto mb-4 object-cover object-top"
+                />
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
               </div>
             ))}
           </div>
