@@ -24,7 +24,7 @@ const Navigation = () => {
       pathname === href ? 'text-white bg-amber-600 shadow-sm' : 'text-amber-800 hover:text-amber-900 hover:bg-amber-50'
     }`
 
-  const isExperiencesActive = ['/hackathon', '/cultural-night', '/sports'].some((p) => pathname.startsWith(p))
+  const isExperiencesActive = ['/hackathon', '/cultural-night', '/sports', '/sri'].some((p) => pathname.startsWith(p))
 
   return (
     <nav className="bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-md fixed w-full z-50 border-b border-amber-100">
