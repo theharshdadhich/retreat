@@ -59,7 +59,7 @@ const itineraryData = [
         description: 'Strategic planning and company updates'
       },
       {
-        time: '16:30 – 17:30',
+        time: '16:30 – 17:00',
         title: 'High Tea',
         participants: 'Everyone',
         type: 'meal',
@@ -114,15 +114,15 @@ const itineraryData = [
         description: 'Interactive workshops and activities for children and families'
       },
       {
-        time: '12:30 – 14:30',
+        time: '12:30 – 14:00',
         title: 'Lunch',
         participants: 'Everyone',
         type: 'meal',
         description: 'Lunch break with team discussions'
       },
       {
-        time: '15:00 – 15:40',
-        title: 'Fireside Chat',
+        time: '14:00 – 15:30',
+        title: 'Leadership Insights + Q&A',
         participants: 'BOT Team',
         type: 'meeting',
         description: 'Company updates and future roadmap presentation'
@@ -175,13 +175,13 @@ const itineraryData = [
     day: 3,
     date: 'October 26, Sunday',
     activities: [
-      {
-        time: '07:00 – 08:00',
-        title: 'Recharge and Connect',
-        participants: 'Everyone',
-        type: 'activity',
-        description: 'Morning sports and fitness activities'
-      },
+      // {
+      //   time: '07:00 – 08:00',
+      //   title: 'Recharge and Connect',
+      //   participants: 'Everyone',
+      //   type: 'activity',
+      //   description: 'Morning sports and fitness activities'
+      // },
       {
         time: '08:00 – 10:00',
         title: 'Breakfast',
