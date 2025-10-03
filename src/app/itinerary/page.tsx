@@ -132,7 +132,7 @@ const itineraryData = [
         title: 'Give Back - Śrī',
         participants: 'Everyone',
         type: 'meeting',
-        description: 'Interactive Q&A session with leadership'
+        description: 'Giving Back Together'
       },
       {
         time: '17:00 – 18:00',
