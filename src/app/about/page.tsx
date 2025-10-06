@@ -130,7 +130,7 @@ const teamMembers = [
   },
   {
     name: "Priyanka Indoria",
-    image: "/images/about/team/priyanka-indoria.webp"
+    image: "/images/about/team/priyanka.webp"
   },
   {
     name: "Ranjan Singh",
