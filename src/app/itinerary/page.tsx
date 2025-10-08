@@ -73,7 +73,7 @@ const itineraryData = [
         description: 'Team building and fun activities'
       },
       {
-        time: '19:30 – 22:30',
+        time: '20:30 – 22:30',
         title: 'Dinner and Cocktails',
         participants: 'Everyone',
         type: 'meal',
@@ -128,7 +128,7 @@ const itineraryData = [
         description: 'Company updates and future roadmap presentation'
       },
       {
-        time: '16:00 – 17:00',
+        time: '15:30 – 17:00',
         title: 'Give Back - Śrī',
         participants: 'Everyone',
         type: 'meeting',
