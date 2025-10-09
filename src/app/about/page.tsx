@@ -193,7 +193,7 @@ const cabMembers = [
   {
     name: "Christian H. Jensen",
     company: "Agentic First",
-    image: "/images/about/cab/christian.webp"
+    image: "/images/about/cab/christain.webp"
   },
   {
     name: "Jacob Moller",
