@@ -31,7 +31,7 @@ const itineraryData = [
         description: 'Lunch at the resort'
       },
       {
-        time: '14:15 – 14:30',
+        time: '14:00 – 14:30',
         title: 'Welcome Note',
         participants: 'Everyone',
         type: 'meeting',
@@ -59,7 +59,7 @@ const itineraryData = [
         description: 'Strategic planning and company updates'
       },
       {
-        time: '16:30 – 17:00',
+        time: '17:00 – 17:30',
         title: 'High Tea',
         participants: 'Everyone',
         type: 'meal',
@@ -73,7 +73,7 @@ const itineraryData = [
         description: 'Team building and fun activities'
       },
       {
-        time: '20:30 – 22:30',
+        time: '20:00 – 22:30',
         title: 'Dinner and Cocktails',
         participants: 'Everyone',
         type: 'meal',
@@ -111,7 +111,7 @@ const itineraryData = [
         title: 'Fun Workshops',
         participants: 'Kids & Families',
         type: 'activity',
-        description: 'Interactive workshops and activities for children and families'
+        description: 'Interactive workshops & activities for kids & families'
       },
       {
         time: '12:30 – 14:00',
@@ -121,8 +121,8 @@ const itineraryData = [
         description: 'Lunch break with team discussions'
       },
       {
-        time: '14:00 – 15:30',
-        title: 'Leadership Insights + Q&A',
+        time: '14:15 – 15:30',
+        title: 'Leadership Insights + Fireside Chat',
         participants: 'BOT Team',
         type: 'meeting',
         description: 'Company updates and future roadmap presentation'
@@ -135,7 +135,7 @@ const itineraryData = [
         description: 'Giving Back Together'
       },
       {
-        time: '17:00 – 18:00',
+        time: '17:00 – 17:30',
         title: 'High Tea',
         participants: 'Everyone',
         type: 'meal',
